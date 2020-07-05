@@ -6,7 +6,8 @@ const ejs = require("ejs");
 const _ = require('lodash');
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb+srv://abhijeeth:test1234@cluster0-8qxkw.mongodb.net/mediaRank",{useNewUrlParser: true, useUnifiedTopology: true});
+//mongoose.connect("mongodb+srv://abhijeeth:test1234@cluster0-8qxkw.mongodb.net/mediaRank",{useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect("mongodb://localhost:27017/mediaRank",{useNewUrlParser: true, useUnifiedTopology: true});
 
 app.use(bodyParser.urlencoded({extended : true}));
 app.set('view engine', 'ejs');
@@ -17,7 +18,8 @@ const mediaSchema = new mongoose.Schema({
   name: String,
   alexaRank: String,
   pageRank: String,
-  politicalBias: String
+  politicalBias: String,
+  factCheck: String
 });
 
 
@@ -33,11 +35,13 @@ app.post("/",function(req,res){
   alexaRank = req.body.alexaRank;
   pageRank = req.body.pageRank;
   politicalBias = req.body.politicalBias;
+  factCheck = req.body.factCheck;
   const media = new Media({
     name: mediaName,
     alexaRank: alexaRank,
     pageRank: pageRank,
-    politicalBias: politicalBias
+    politicalBias: politicalBias,
+    factCheck: factCheck
   });
   media.save();
   res.redirect("/");
