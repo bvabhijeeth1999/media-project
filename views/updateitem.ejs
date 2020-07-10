@@ -13,7 +13,6 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
     <!-- Custom styles for this template -->
     <link href="/css/signin.css" rel="stylesheet">
     <!-- fontawesome -->
@@ -38,9 +37,9 @@
 
   <body class="text-center">
     <div class="container1">
-      <form class="add-item" action="/additem" method="post">
+      <form class="add-item" action="/updateitem" method="post">
         <img class="img-adjust" src="/favicons/news-icon.webp" alt="item-image" width="200" height="200">
-        <h1 class="h3 mb-3 font-weight-normal brand">ADD MEDIA</h1>
+        <h1 class="h3 mb-3 font-weight-normal brand">UPDATE MEDIA</h1>
         <label for="inputName" class="sr-only">Media Name</label>
         <input type="text" name="mediaName" id="inputName" class="form-control" placeholder="Media Name" required autofocus>
         <label for="inputImageURL" class="sr-only">Popularity</label>
@@ -51,7 +50,7 @@
         <input type="text" name="politicalBias" id="inputNumberItems" class="form-control" placeholder="Media Bias" required>
         <label for="inputfactCheck" class="sr-only">Fact Check</label>
         <input type="text" name="factCheck" id="inputfactCheck" class="form-control" placeholder="Fact Check" required>
-        <button class="btn btn-lg btn-danger btn-block" type="submit">ADD MEDIA</button>
+        <button class="btn btn-lg btn-danger btn-block" type="submit">UPDATE MEDIA</button>
         <p class="mt-5 mb-3 text-muted">&copy; 2020-2021</p>
       </form>
     </div>

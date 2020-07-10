@@ -1,0 +1,45 @@
+<!doctype HTML>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>MediaRank</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" href="/favicons/news-icon.webp" type="image/x-icon"/>
+
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/42b63e661f.js" crossorigin="anonymous"></script>
+
+  <!-- bootstrap navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <div class="navbar-header">
+        <p class="navbar-brand"><i class="far fa-newspaper"></i> MEDIARANK</p>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <!-- 6 -->
+        <li id="home"><a class="nav-item nav-link" href="/">HOME</a></li>
+        <li id="home"><a class="nav-item nav-link" href="/additem">ADD-MEDIAITEM</a></li>
+        <li id="home"><a class="nav-item nav-link" href="/updateitem">UPDATE-MEDIAITEM</a></li>
+        <li id="home"><a class="nav-item nav-link" href="/medialist">MEDIA-LIST</a></li>
+      </ul>
+    </div>
+  </nav>
+</head>
+
+<body>
+  <div class="container1">
+    <!-- Now here we need to display the items from the itemArray -->
+    <form class="form-group" action="/" method="post">
+      <h1 class="headi h3 mb-3 font-weight-normal brand">MEDIA RANK</h1>
+      <label for="inputName" class="sr-only">Media Name</label>
+      <input type="text" name="mediaName" id="inputName" class="form-control form-control-lg adjust" placeholder="Search e.g. Indiatimes.com           (click on media-list on top-right to view all available media)" required autofocus>
+      <button class="btn btn-lg btn-danger btn-modi" type="submit">Find Rank</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2020-2021</p>
+    </form>
+  </div>
+</body>
+
+</html>

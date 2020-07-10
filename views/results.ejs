@@ -1,0 +1,49 @@
+<!doctype HTML>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>MediaRank</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" href="/favicons/news-icon.webp" type="image/x-icon"/>
+
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/42b63e661f.js" crossorigin="anonymous"></script>
+
+  <!-- bootstrap navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <div class="navbar-header">
+        <p class="navbar-brand"><i class="far fa-newspaper"></i> MEDIARANK</p>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <!-- 6 -->
+        <li id="home"><a class="nav-item nav-link" href="/">HOME</a></li>
+        <li id="home"><a class="nav-item nav-link" href="/additem">ADD-MEDIAITEM</a></li>
+        <li id="home"><a class="nav-item nav-link" href="/updateitem">UPDATE-MEDIAITEM</a></li>
+        <li id="home"><a class="nav-item nav-link" href="/medialist">MEDIA-LIST</a></li>
+      </ul>
+    </div>
+  </nav>
+</head>
+
+<body>
+  <div class="container2">
+    <h1><%= name %></h1>
+    <h3>Rank : <%= rank %></h3>
+    <% if(bias === "Nill"){ %>
+      <h3>Political Bias : Still under survey </h3>
+    <% } else { %>
+      <h3>Political Bias : <%= bias %> </h3>
+    <% } %>
+    <% if(factCheck === "Nill"){ %>
+      <h3>Fact Check : Still under survey </h3>
+    <% } else { %>
+      <h3>Fact Check : <%= factCheck %> </h3>
+    <% } %>
+  </div>
+</body>
+
+</html>
